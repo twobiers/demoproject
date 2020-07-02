@@ -1,5 +1,3 @@
 package org.example;
 
-public @interface Annotation1 {
-
-}
+public @interface Annotation1 {}
