@@ -1,4 +1,3 @@
 package org.example;
 
-public enum Enum1 {
-}
+public enum Enum1 {}
