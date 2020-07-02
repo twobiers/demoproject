@@ -1,4 +1,16 @@
 language: java
+
+# Cache Dependencies
+cache:
+  directories:
+    - "$HOME/.m2"
+
+# Build with OpenJDK and Oracle JDK
 jdk:
   - openjdk11
   - oraclejdk11
+
+# Only on master branch
+branches:
+  only:
+    - master
