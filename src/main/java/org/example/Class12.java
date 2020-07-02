@@ -1,6 +1,6 @@
 package org.example;
 
-public class Class1 {
+public class Class12 {
 
   /**
    * Stupid Method to determine whether a given int is even
