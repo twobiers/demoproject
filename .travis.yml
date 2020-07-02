@@ -5,10 +5,20 @@ cache:
   directories:
     - "$HOME/.m2"
 
+install:
+  - mvn install -DskipTests=true -DskipITs=true -Darchetype.test.skip=true -Dmaven.javadoc.skip=true -B -V
+
 # Build with OpenJDK and Oracle JDK
 jdk:
   - openjdk11
   - oraclejdk11
+
+jobs:
+  include:
+    - stage: test
+      script: mvn verify -P-spotless-apply
+    - stage: test
+      script: mvn test -B
 
 # Only on master branch
 branches:
