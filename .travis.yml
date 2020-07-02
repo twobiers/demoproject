@@ -17,6 +17,7 @@ jobs:
   include:
     - stage: test
       script: mvn verify -P-spotless-apply
+      jdk: openjdk11 #Run Only with OpenJDK 11 as it's a code style verification
     - stage: test
       script: mvn test -B
 
