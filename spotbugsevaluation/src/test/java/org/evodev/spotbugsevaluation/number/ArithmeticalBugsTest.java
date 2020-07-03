@@ -16,7 +16,7 @@ class ArithmeticalBugsTest {
   }
 
   @Test
-  void divisionByZeroShouldThrowException() {
+  void divisionByZeroThrowsException() {
     assertThrows(ArithmeticException.class, () -> arithmeticalBugs.divisionByZero(20));
   }
 
