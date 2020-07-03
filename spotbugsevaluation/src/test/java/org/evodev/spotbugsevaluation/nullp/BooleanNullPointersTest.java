@@ -38,12 +38,15 @@ class BooleanNullPointersTest {
     assertTrue(booleanNullPointers.booleanOperationAnd(true, true));
     assertFalse(booleanNullPointers.booleanOperationAnd(false, false));
     assertFalse(booleanNullPointers.booleanOperationAnd(false, false));
-    assertThrows(NullPointerException.class, () -> booleanNullPointers.booleanOperationAnd(null, false));
-    assertThrows(NullPointerException.class, () -> booleanNullPointers.booleanOperationAnd(null, true));
-    assertThrows(NullPointerException.class, () -> booleanNullPointers.booleanOperationAnd(true, null));
+    assertThrows(
+        NullPointerException.class, () -> booleanNullPointers.booleanOperationAnd(null, false));
+    assertThrows(
+        NullPointerException.class, () -> booleanNullPointers.booleanOperationAnd(null, true));
+    assertThrows(
+        NullPointerException.class, () -> booleanNullPointers.booleanOperationAnd(true, null));
 
-    //Special Case!
-    //First element in AND Operation false -> result will always be false
+    // Special Case!
+    // First element in AND Operation false -> result will always be false
     assertFalse(booleanNullPointers.booleanOperationAnd(false, null));
   }
 }

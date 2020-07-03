@@ -2,7 +2,7 @@ package org.evodev.spotbugsevaluation.nullp;
 
 public class BooleanNullPointers {
 
-  private final static Boolean aBoolean = null;
+  private static final Boolean aBoolean = null;
 
   // Unknown detection
   public Boolean returnDirectNull() {
