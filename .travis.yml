@@ -13,19 +13,18 @@ install:
   - mvn install -DskipTests=true -DskipITs=true -Darchetype.test.skip=true -Dmaven.javadoc.skip=true -B -V
 
 # Build with OpenJDK and Oracle JDK
-
+jdk:
+  - openjdk11
+  - oraclejdk11
 
 jobs:
   include:
     - stage: test
-      script: mvn verify -P-spotless-apply
+      script: mvn spotless:check
       jdk: openjdk11 #Run Only with OpenJDK 11 as it's a code style verification
       name: Spotless Code Check
     - stage: test
       script: mvn test -B
-      jdk:
-        - openjdk11
-        - oraclejdk11
       name: Unit Test
 
 after_success:
