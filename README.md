@@ -15,22 +15,22 @@ It is possible that a submodule would use another language, which is mentioned i
 As of now the code base makes use of the following tools:
 
 Dependency Management
-- Maven
+- Maven ([Website](https://maven.apache.org/), [Github](https://github.com/apache/maven), [License](https://github.com/apache/maven/blob/master/LICENSE))
 
 Logging:
-- SLF4J API
+- SLF4J API ([Website](http://www.slf4j.org/), [Github](https://github.com/qos-ch/slf4j), [License](https://github.com/qos-ch/slf4j/blob/master/LICENSE.txt))
 
 Unit Testing:
-- JUnit 5
+- JUnit 5 ([Website](https://junit.org/junit5/), [Github](https://github.com/junit-team/junit5), [License](https://github.com/junit-team/junit5/blob/main/LICENSE.md))
     - JUnit Jupiter API
     - JUnit Jupiter Engine
-- Hamcrest
-- JaCoCo
+- Hamcrest ([Website](http://hamcrest.org/), [Github](https://github.com/hamcrest/JavaHamcrest), [License](https://github.com/hamcrest/JavaHamcrest/blob/master/LICENSE.txt))
+- JaCoCo ([Website](https://www.jacoco.org/jacoco/), [Github](https://github.com/jacoco/jacoco), [License](https://www.jacoco.org/jacoco/trunk/doc/license.html))
 
 Code Style:
-- Spotless
-    - Google Java Format
-    - KtLint
+- Spotless ([Github](https://github.com/diffplug/spotless), [License](https://github.com/diffplug/spotless/blob/main/LICENSE.txt))
+    - Google Java Format ([Github](https://github.com/google/google-java-format), [License](https://github.com/google/google-java-format/blob/master/LICENSE))
+    - KtLint ([Website](https://ktlint.github.io/), [Github](https://github.com/pinterest/ktlint), [License](https://github.com/pinterest/ktlint/blob/master/LICENSE))
 
 ## Code Coverage
 As of now the preferred way to achieve 100% code coverage would be:
