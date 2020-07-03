@@ -2,12 +2,12 @@
   <configuration default="false" name="App (AdoptOpenJDK 14 - Shenandoah - With Diagnosis)" type="Application" factoryName="Application">
     <option name="ALTERNATIVE_JRE_PATH" value="adopt-openjdk-14" />
     <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-    <option name="MAIN_CLASS_NAME" value="org.example.App" />
+    <option name="MAIN_CLASS_NAME" value="org.evodev.App" />
     <module name="demoproject" />
     <option name="VM_PARAMETERS" value="-XX:+UnlockExperimentalVMOptions -XX:+UseShenandoahGC -Xlog:gc* -XX:+UnlockDiagnosticVMOptions -XX:+ShenandoahAllocationTrace" />
     <extension name="coverage">
       <pattern>
-        <option name="PATTERN" value="org.example.*" />
+        <option name="PATTERN" value="org.evodev.*" />
         <option name="ENABLED" value="true" />
       </pattern>
     </extension>

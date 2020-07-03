@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
   <!-- Basics -->
-  <groupId>org.example</groupId>
+  <groupId>org.evodev</groupId>
   <artifactId>demoproject</artifactId>
-  <version>1.0-SNAPSHOT</version>
-
+  <packaging>pom</packaging>
+  <version>0.0.1-SNAPSHOT</version>
   <name>demoproject</name>
   <url>http://www.example.com</url>
-
+  <modules>
+    <module>kotlinjavainterop</module>
+  </modules>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>11</maven.compiler.source>
@@ -21,7 +20,6 @@
     <spotless.version>2.0.0</spotless.version>
     <!-- Faster but experimental (test compile not working) <kotlin.compiler.incremental>true</kotlin.compiler.incremental>-->
   </properties>
-
   <!-- Dependencies -->
   <dependencies>
     <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
@@ -63,9 +61,9 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
   <build>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+    <pluginManagement>
+      <!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
         <plugin>
@@ -76,10 +74,6 @@
         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
           <version>3.0.2</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.8.0</version>
         </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
@@ -106,9 +100,6 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
-      </plugins>
-    </pluginManagement>
-    <plugins>
       <plugin>
         <groupId>org.jetbrains.kotlin</groupId>
         <artifactId>kotlin-maven-plugin</artifactId>
@@ -116,7 +107,9 @@
         <executions>
           <execution>
             <id>compile</id>
-            <goals> <goal>compile</goal> </goals>
+            <goals>
+              <goal>compile</goal>
+            </goals>
             <configuration>
               <sourceDirs>
                 <sourceDir>${project.basedir}/src/main/kotlin</sourceDir>
@@ -127,7 +120,9 @@
           </execution>
           <execution>
             <id>test-compile</id>
-            <goals> <goal>test-compile</goal> </goals>
+            <goals>
+              <goal>test-compile</goal>
+            </goals>
             <configuration>
               <sourceDirs>
                 <sourceDir>${project.basedir}/src/test/kotlin</sourceDir>
@@ -156,12 +151,16 @@
           <execution>
             <id>java-compile</id>
             <phase>compile</phase>
-            <goals> <goal>compile</goal> </goals>
+            <goals>
+              <goal>compile</goal>
+            </goals>
           </execution>
           <execution>
             <id>java-test-compile</id>
             <phase>test-compile</phase>
-            <goals> <goal>testCompile</goal> </goals>
+            <goals>
+              <goal>testCompile</goal>
+            </goals>
           </execution>
         </executions>
       </plugin>
@@ -176,10 +175,11 @@
               <include>src/main/java/**/*.java</include>
               <include>src/test/java/**/*.java</include>
             </includes>
-
             <googleJavaFormat>
-              <version>1.8</version> <!-- optional -->
-              <style>GOOGLE</style>  <!-- or AOSP (optional) -->
+              <version>1.8</version>
+              <!-- optional -->
+              <style>GOOGLE</style>
+              <!-- or AOSP (optional) -->
             </googleJavaFormat>
           </java>
           <kotlin>
@@ -192,7 +192,8 @@
               <version>0.37.2</version>
             </ktlint>
             <licenseHeader>
-              <content>/* (C)$YEAR */</content>  <!-- or <file>${basedir}/license-header</file> -->
+              <content>/* (C)$YEAR */</content>
+              <!-- or <file>${basedir}/license-header</file> -->
             </licenseHeader>
           </kotlin>
         </configuration>
@@ -212,6 +213,23 @@
             <phase>test</phase>
             <goals>
               <goal>report</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.jetbrains.kotlin</groupId>
+        <artifactId>kotlin-maven-plugin</artifactId>
+        <version>${kotlin.version}</version>
+        <executions>
+          <execution>
+            <id>compile</id>
+            <phase>compile</phase>
+            <goals>
+              <goal>compile</goal>
             </goals>
           </execution>
         </executions>
