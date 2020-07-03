@@ -2,8 +2,7 @@ package org.evodev.spotbugsevaluation.nullp;
 
 public class BooleanNullPointers {
 
-  private final Boolean aBoolean = null;
-  private Boolean bBoolean = null;
+  private static final Boolean aBoolean = null;
 
   // Unknown detection
   public Boolean returnDirectNull() {
@@ -16,12 +15,13 @@ public class BooleanNullPointers {
   }
 
   // Unknown detection
-  public Boolean returnNullFromOneVariableWithNotNullValue() {
-    return aBoolean && bBoolean;
+  public Boolean booleanOperationAnd(Boolean a, Boolean b) {
+    return a && b;
   }
 
   // Unknown detection
   public Boolean returnBooleanFromWrittenVariable() {
+    Boolean bBoolean = null;
     bBoolean = false;
     return bBoolean;
   }
