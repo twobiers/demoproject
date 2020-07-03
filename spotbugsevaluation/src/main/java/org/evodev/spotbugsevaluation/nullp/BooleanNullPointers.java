@@ -22,7 +22,7 @@ public class BooleanNullPointers {
 
   // Unknown detection
   public Boolean returnBooleanFromWrittenVariable() {
-    aBoolean = true;
+    aBoolean = false;
     return aBoolean;
   }
 }
