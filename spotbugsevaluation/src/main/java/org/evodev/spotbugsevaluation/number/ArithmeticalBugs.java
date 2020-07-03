@@ -6,9 +6,9 @@ public class ArithmeticalBugs {
 
   // Not detected by spotbugs
   public double divisionByZero(int i) {
-    return new BigInteger(String.valueOf(i))
-        .divide(new BigInteger(String.valueOf(0)))
-        .doubleValue();
+    String iString = String.valueOf(i);
+    BigInteger bigInt = new BigInteger(iString);
+    return bigInt.divide(BigInteger.ZERO).doubleValue();
   }
 
   // Detected CNT_ROUGH_CONSTANT_VALUE

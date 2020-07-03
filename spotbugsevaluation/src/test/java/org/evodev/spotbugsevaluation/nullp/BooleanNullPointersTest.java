@@ -27,14 +27,14 @@ class BooleanNullPointersTest {
   }
 
   @Test
-  void returnNullFromOneVariableWithNotNullValueThrowsNullPointerException() {
-    assertThrows(
-        NullPointerException.class,
-        () -> booleanNullPointers.returnNullFromOneVariableWithNotNullValue());
+  void returnBooleanFromWrittenVariableReturnsFalse() {
+    assertFalse(booleanNullPointers.returnBooleanFromWrittenVariable());
   }
 
   @Test
-  void returnBooleanFromWrittenVariableReturnsFalse() {
-    assertFalse(booleanNullPointers.returnBooleanFromWrittenVariable());
+  void returnNullFromOneVariableWithNotNullValueThrowsException() {
+    assertThrows(
+        NullPointerException.class,
+        () -> booleanNullPointers.returnNullFromOneVariableWithNotNullValue());
   }
 }
