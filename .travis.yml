@@ -9,8 +9,15 @@ env:
   global:
     - CODECOV_TOKEN=dc14bc46-660d-489e-b008-aeb09b14b888
 
+addons:
+  sonarcloud:
+    organization: "tobi6112"
+    token:
+      secure: "jWm+KQU/F3+mJCgd5hU+K5W7ZRNekZeTWFFmvCIQvDhozxqsPsnVzvP6YSG3Nl5FyBJgv2OfczxM0GEfHvyYsHJZ1eDjAj6srOTdUR9zYsyqfSgmW4Bs7Iqi0glp32hmP9reyA3ylws2iYLhrh2Ukwwh8IBrbH4G7y6oYmRbFCi0EDylgcRvX2HreZkkJS0XWdj07YlXu5R5ofb8Z8fTkLCSFMl5ZTfyeWEHZpsG93WGU7q+CIFgXKczjzqiOwWzo1fVscyninScuEcHj6jX3D6FdyuMf1DkBxJ5Pw3eopkd91VDwQTfzcJyU+rY/oT74Fpu7gdaUS9XdM7/RjthRLft0yU/V9INMXGgryUQW1PQtbBAk9NfWBekzl7h4K2732dqmNzPsSgvThdh+ImX7/cIGCCLXmNfxeQertyygL9KqyblCdbKTumPw2NxYHuiOeHxfMylyJquaTFqEoLkrlVGhIAsrcWJXH2crhmuHu9oTR5I1Z467fJdmFJCPmUTGzd3UeH7bhLPZHXMrKcA+vOi7PmaNrVqTPChkl5HdtJdjq2DZ8sl0xQjD0PWp2ZnEANKQTPPrKdudsAQFHC+uLrq5tHP6Xn8mBbtLq8+7SOBPY8HrA6YWeDDeABwAriRlZquzMcmXR5R5owdsLK4wmgDrvpYGiKcNoNip3rxYuc="
+
 install:
   - mvn install -DskipTests=true -DskipITs=true -Darchetype.test.skip=true -Dmaven.javadoc.skip=true -B -V
+  - mvn install sonar:sonar -Dsonar.projectKey=tobi6112_demoproject
 
 # Build with OpenJDK and Oracle JDK
 jdk:
@@ -34,3 +41,4 @@ after_success:
 branches:
   only:
     - master
+    - dev-tobi
