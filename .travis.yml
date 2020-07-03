@@ -5,6 +5,10 @@ cache:
   directories:
     - "$HOME/.m2"
 
+env:
+  global:
+    - CODECOV_TOKEN=:CODECOV_TOKEN
+
 install:
   - mvn install -DskipTests=true -DskipITs=true -Darchetype.test.skip=true -Dmaven.javadoc.skip=true -B -V
 
@@ -20,6 +24,9 @@ jobs:
       jdk: openjdk11 #Run Only with OpenJDK 11 as it's a code style verification
     - stage: test
       script: mvn test -B
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
 
 # Only on master branch
 branches:
