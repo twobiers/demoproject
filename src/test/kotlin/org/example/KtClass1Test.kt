@@ -10,6 +10,7 @@ internal class KtClass1Test {
     @Test
     fun isEvenNumber() {
         val class1 = KtClass1()
+        assertFalse(class1.isEvenNumber(0))
         assertTrue(class1.isEvenNumber(2))
         assertFalse(class1.isEvenNumber(3))
         assertTrue(class1.isEvenNumber(4))

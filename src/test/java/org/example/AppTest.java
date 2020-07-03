@@ -8,7 +8,12 @@ import org.junit.jupiter.api.Test;
 public class AppTest {
   /** Rigorous Test :-) */
   @Test
-  public void shouldAnswerWithTrue() {
-    assertTrue(true);
+  public void shouldRunWithoutException() {
+    App.main(null);
+  }
+
+  @Test
+  public void constructionOfAppIsPossible() {
+    App app = new App();
   }
 }
