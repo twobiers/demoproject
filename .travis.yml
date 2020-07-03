@@ -7,7 +7,7 @@ cache:
 
 env:
   global:
-    - CODECOV_TOKEN=:CODECOV_TOKEN
+    - CODECOV_TOKEN=dc14bc46-660d-489e-b008-aeb09b14b888
 
 install:
   - mvn install -DskipTests=true -DskipITs=true -Darchetype.test.skip=true -Dmaven.javadoc.skip=true -B -V
