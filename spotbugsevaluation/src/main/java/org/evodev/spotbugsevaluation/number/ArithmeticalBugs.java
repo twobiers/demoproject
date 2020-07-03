@@ -4,13 +4,13 @@ import java.math.BigInteger;
 
 public class ArithmeticalBugs {
 
+  private static final BigInteger bigZero = BigInteger.ZERO;
+
   // Not detected by spotbugs
-  public double divisionByZero(int i) {
-    String iString = String.valueOf(i);
-    BigInteger bigInt = new BigInteger(iString);
-    BigInteger bigZero = BigInteger.ZERO;
-    bigInt = bigInt.divide(bigZero);
-    return bigInt.doubleValue();
+  public double division(int i, int j) {
+    BigInteger bigI = new BigInteger(String.valueOf(i));
+    BigInteger bigJ = new BigInteger(String.valueOf(j));
+    return bigI.divide(bigJ).doubleValue();
   }
 
   // Detected CNT_ROUGH_CONSTANT_VALUE
