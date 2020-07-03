@@ -16,12 +16,12 @@ class ArithmeticalBugsTest {
   }
 
   @Test
-  void divisionByZeroThrowsException() {
-    assertThrows(ArithmeticException.class, () -> arithmeticalBugs.divisionByZero(20));
+  void circumference() {
+    assertEquals(62.82, arithmeticalBugs.circumference(20));
   }
 
   @Test
-  void circumference() {
-    assertEquals(62.82, arithmeticalBugs.circumference(20));
+  void divisionByZeroThrowsException() {
+    assertThrows(ArithmeticException.class, () -> arithmeticalBugs.divisionByZero(20));
   }
 }
