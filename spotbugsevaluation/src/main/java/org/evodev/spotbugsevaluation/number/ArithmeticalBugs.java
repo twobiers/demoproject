@@ -8,7 +8,9 @@ public class ArithmeticalBugs {
   public double divisionByZero(int i) {
     String iString = String.valueOf(i);
     BigInteger bigInt = new BigInteger(iString);
-    return bigInt.divide(BigInteger.ZERO).doubleValue();
+    BigInteger bigZero = BigInteger.ZERO;
+    bigInt = bigInt.divide(bigZero);
+    return bigInt.doubleValue();
   }
 
   // Detected CNT_ROUGH_CONSTANT_VALUE
