@@ -21,7 +21,8 @@ class ArithmeticalBugsTest {
   }
 
   @Test
-  void divisionByZeroThrowsException() {
-    assertThrows(ArithmeticException.class, () -> arithmeticalBugs.divisionByZero(20));
+  void divisionTest() {
+    assertEquals(2.0, arithmeticalBugs.division(4, 2));
+    assertThrows(ArithmeticException.class, () -> arithmeticalBugs.division(20, 0));
   }
 }
