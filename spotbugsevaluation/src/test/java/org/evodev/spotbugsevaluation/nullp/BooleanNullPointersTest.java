@@ -49,4 +49,9 @@ class BooleanNullPointersTest {
     // First element in AND Operation false -> result will always be false
     assertFalse(booleanNullPointers.booleanOperationAnd(false, null));
   }
+
+  @Test
+  void getbBoolean() {
+    assertFalse(booleanNullPointers.getbBoolean());
+  }
 }
