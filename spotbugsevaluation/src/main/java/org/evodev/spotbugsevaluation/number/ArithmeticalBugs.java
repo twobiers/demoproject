@@ -4,8 +4,6 @@ import java.math.BigInteger;
 
 public class ArithmeticalBugs {
 
-  private static final BigInteger bigZero = BigInteger.ZERO;
-
   // Not detected by spotbugs
   public double division(int i, int j) {
     BigInteger bigI = new BigInteger(String.valueOf(i));
