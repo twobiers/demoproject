@@ -1,4 +1,3 @@
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=tobi6112_demoproject&metric=alert_status)](https://sonarcloud.io/dashboard?id=tobi6112_demoproject)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=tobi6112_demoproject&metric=bugs)](https://sonarcloud.io/dashboard?id=tobi6112_demoproject)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=tobi6112_demoproject&metric=code_smells)](https://sonarcloud.io/dashboard?id=tobi6112_demoproject)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=tobi6112_demoproject&metric=coverage)](https://sonarcloud.io/dashboard?id=tobi6112_demoproject)
