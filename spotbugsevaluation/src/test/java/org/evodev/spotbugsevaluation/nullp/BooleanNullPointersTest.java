@@ -29,7 +29,7 @@ class BooleanNullPointersTest {
 
   @Test
   void returnBooleanFromWrittenVariableReturnsFalse() {
-    assertFalse(booleanNullPointers.returnBooleanFromWrittenVariable());
+    assertNull(booleanNullPointers.returnBooleanFromWrittenVariable());
   }
 
   @Test
