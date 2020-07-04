@@ -20,13 +20,14 @@ public class BooleanNullPointers {
   }
 
   /**
-   * Some whack function that avoids Code Smell in Code Check and still allows to
-   * securely write a null value to an not-null-initialised Boolean
+   * Some whack function that avoids Code Smell in Code Check and still allows to securely write a
+   * null value to an not-null-initialised Boolean
+   *
    * @return should always be null except your timestamp equals Long.MIN_VALUE
    */
   public Boolean returnBooleanFromWrittenVariable() {
     Boolean bBoolean = System.currentTimeMillis() > Long.MIN_VALUE;
-    if(System.currentTimeMillis() > Long.MIN_VALUE) {
+    if (System.currentTimeMillis() > Long.MIN_VALUE) {
       bBoolean = null;
     }
     return bBoolean;
