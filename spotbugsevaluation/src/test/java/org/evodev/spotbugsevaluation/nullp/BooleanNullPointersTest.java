@@ -29,7 +29,7 @@ class BooleanNullPointersTest {
 
   @Test
   void returnBooleanFromWrittenVariableReturnsFalse() {
-    assertFalse(booleanNullPointers.returnBooleanFromWrittenVariable());
+    assertNull(booleanNullPointers.returnBooleanFromWrittenVariable());
   }
 
   @Test
@@ -48,5 +48,10 @@ class BooleanNullPointersTest {
     // Special Case!
     // First element in AND Operation false -> result will always be false
     assertFalse(booleanNullPointers.booleanOperationAnd(false, null));
+  }
+
+  @Test
+  void getbBoolean() {
+    assertFalse(booleanNullPointers.getbBoolean());
   }
 }
