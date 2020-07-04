@@ -12,8 +12,8 @@ class StringExtensionsConsumerTest {
 
   @Test
   void getIntegerRepresentation() {
-    assertEquals(stringExtensionsConsumer.getIntegerRepresentation("123"), 123);
-    assertEquals(stringExtensionsConsumer.getIntegerRepresentation("-123"), -123);
+    assertEquals(123, stringExtensionsConsumer.getIntegerRepresentation("123"));
+    assertEquals(-123, stringExtensionsConsumer.getIntegerRepresentation("-123"));
     assertThrows(
         NumberFormatException.class, () -> stringExtensionsConsumer.getIntegerRepresentation(""));
     assertThrows(
