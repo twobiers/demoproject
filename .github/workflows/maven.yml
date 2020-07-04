@@ -5,7 +5,9 @@ name: Maven Build JDK 11
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
+      - dev-tobi
   pull_request:
     branches: [ master ]
 
