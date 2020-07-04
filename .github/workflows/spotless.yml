@@ -1,0 +1,17 @@
+name: Spotless Code Style Check
+on:
+  push:
+    branches:
+      - master
+      - dev-tobi
+jobs:
+  build:
+    runs-on: ubuntu-16.04
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: '11'
+      - name: Check Code Style with Spotless
+        run: mvn spotless:check -DskipTests=true -DskipITs=true -Darchetype.test.skip=true -Dmaven.javadoc.skip=true -B -V
