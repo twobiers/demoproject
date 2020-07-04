@@ -9,8 +9,8 @@ internal class StringExtensionsKtTest {
 
     @Test
     fun getIntRepresentation() {
-        assertEquals("123".getIntRepresentation(), 123)
-        assertEquals("-123".getIntRepresentation(), -123)
+        assertEquals(123, "123".getIntRepresentation())
+        assertEquals(-123, "-123".getIntRepresentation())
         assertThrows(NumberFormatException::class.java) {
             "".getIntRepresentation()
         }
