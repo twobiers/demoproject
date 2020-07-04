@@ -1,3 +1,15 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=tobi6112_demoproject&metric=alert_status)](https://sonarcloud.io/dashboard?id=tobi6112_demoproject)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=tobi6112_demoproject&metric=bugs)](https://sonarcloud.io/dashboard?id=tobi6112_demoproject)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=tobi6112_demoproject&metric=code_smells)](https://sonarcloud.io/dashboard?id=tobi6112_demoproject)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=tobi6112_demoproject&metric=coverage)](https://sonarcloud.io/dashboard?id=tobi6112_demoproject)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=tobi6112_demoproject&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=tobi6112_demoproject)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=tobi6112_demoproject&metric=ncloc)](https://sonarcloud.io/dashboard?id=tobi6112_demoproject)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=tobi6112_demoproject&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=tobi6112_demoproject)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=tobi6112_demoproject&metric=alert_status)](https://sonarcloud.io/dashboard?id=tobi6112_demoproject)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=tobi6112_demoproject&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=tobi6112_demoproject)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=tobi6112_demoproject&metric=security_rating)](https://sonarcloud.io/dashboard?id=tobi6112_demoproject)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=tobi6112_demoproject&metric=sqale_index)](https://sonarcloud.io/dashboard?id=tobi6112_demoproject)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=tobi6112_demoproject&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=tobi6112_demoproject)
 # Demo Project
 This is a simple demo project for evaluating Java/Kotlin practices. 
 This Project is WIP and will be extended.
