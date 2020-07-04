@@ -3,6 +3,7 @@ package org.evodev.spotbugsevaluation.nullp;
 public class BooleanNullPointers {
 
   private static final Boolean ABOOLEAN = null;
+  private Boolean bBoolean = false;
 
   // Unknown detection
   public Boolean returnDirectNull() {
@@ -19,17 +20,14 @@ public class BooleanNullPointers {
     return a && b;
   }
 
-  /**
-   * Some whack function that avoids Code Smell in Code Check and still allows to securely write a
-   * null value to an not-null-initialised Boolean
-   *
-   * @return should always be null except your timestamp equals Long.MIN_VALUE
-   */
+  /** @return should always be null */
   public Boolean returnBooleanFromWrittenVariable() {
-    Boolean bBoolean = System.currentTimeMillis() > Long.MIN_VALUE;
-    if (System.currentTimeMillis() > Long.MIN_VALUE) {
-      bBoolean = null;
-    }
+    bBoolean = null;
+
+    return bBoolean;
+  }
+
+  public Boolean getbBoolean() {
     return bBoolean;
   }
 }
